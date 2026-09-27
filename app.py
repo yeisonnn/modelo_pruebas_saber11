@@ -7,7 +7,15 @@ import joblib
 import numpy as np
 import pandas as pd
 import streamlit as st
+from imblearn.pipeline import Pipeline as ImbPipeline
+from imblearn.under_sampling import RandomUnderSampler
+from sklearn.compose import ColumnTransformer
+from sklearn.impute import SimpleImputer
+from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import f1_score
+from sklearn.model_selection import train_test_split
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import OneHotEncoder, OrdinalEncoder, StandardScaler
 
 BASE = Path(__file__).resolve().parent
 RUTA_MODELO = BASE / "models" / "pipeline_saber11.joblib"
@@ -15,6 +23,12 @@ RUTA_METADATA = BASE / "models" / "metadata.json"
 RUTA_IMPORTANCIAS = BASE / "models" / "importancias.csv"
 RUTA_EJEMPLO = BASE / "data" / "nuevos" / "registros_no_vistos_1000.csv"
 RUTA_MATRIZ = BASE / "reports" / "figures" / "matriz_confusion_final.png"
+RUTA_DATOS_LIMPIOS = BASE / "data" / "processed" / "saber11_antioquia_limpio.csv.gz"
+# Configuración del modelo final según el notebook (secciones 0.3, 3.5 y 4.3). Solo se usa si hay que reconstruirlo
+SEMILLA, N_MUESTRA, PROPORCION_PRUEBA = 42, 30_000, 0.30
+C_FINAL = 0.14445251022763064          # Mejor C de la búsqueda aleatoria de la regresión logística (sección 4.3.2)
+OBJETIVO = "alto_desempeno"
+NO_ORDINALES = ("No sabe", "No Aplica")   # Respuestas sin lugar en la escala ordinal: el pipeline las trata como faltantes
 GRUPOS = {"Estudiante": ["edad", "estu_genero"],
           "Familia": ["fami_estratovivienda", "fami_educacionmadre", "fami_educacionpadre", "fami_personashogar",
                       "fami_cuartoshogar", "fami_tieneinternet", "fami_tienecomputador", "fami_tieneautomovil",
@@ -25,10 +39,40 @@ GRUPOS = {"Estudiante": ["edad", "estu_genero"],
 st.set_page_config(page_title="Saber 11 · Alto desempeño", page_icon="🎓", layout="wide")
 
 
+def reconstruir_modelo(meta):
+    """Reentrena el pipeline final con los mismos datos, partición, preprocesamiento e hiperparámetros del notebook."""
+    datos = pd.read_csv(RUTA_DATOS_LIMPIOS)
+    # Misma muestra de modelado (30.000) y misma partición 70/30 estratificada que el notebook (sección 3.5.1)
+    muestra, _ = train_test_split(datos, train_size=N_MUESTRA, stratify=datos[OBJETIVO], random_state=SEMILLA)
+    X_train, _, y_train, _ = train_test_split(muestra[meta["features"]], muestra[OBJETIVO], test_size=PROPORCION_PRUEBA,
+                                              stratify=muestra[OBJETIVO], random_state=SEMILLA)
+    # Orden de cada variable ordinal: el de la metadata sin las respuestas que no son un nivel (sección 3.5.2)
+    orden = [[c for c in meta["categorias"][v] if c not in NO_ORDINALES] for v in meta["variables_ordinales"]]
+    preprocesador = ColumnTransformer([
+        ("num", Pipeline([("imputar", SimpleImputer(strategy="median")), ("escalar", StandardScaler())]),
+         meta["variables_numericas"]),
+        ("ord", Pipeline([("codificar", OrdinalEncoder(categories=orden, handle_unknown="use_encoded_value",
+                                                       unknown_value=np.nan)),
+                          ("imputar", SimpleImputer(strategy="median", add_indicator=True)),
+                          ("escalar", StandardScaler())]), meta["variables_ordinales"]),
+        ("nom", Pipeline([("imputar", SimpleImputer(strategy="constant", fill_value="DESCONOCIDO")),
+                          ("codificar", OneHotEncoder(handle_unknown="ignore", sparse_output=False))]),
+         meta["variables_nominales"])], remainder="drop")
+    # Preprocesamiento -> submuestreo -> regresión logística ajustada (el umbral de decisión viene de la metadata)
+    pipeline = ImbPipeline([("preprocesamiento", preprocesador),
+                            ("balanceo", RandomUnderSampler(random_state=SEMILLA)),
+                            ("modelo", LogisticRegression(C=C_FINAL, max_iter=2000, random_state=SEMILLA))])
+    return pipeline.fit(X_train, y_train)
+
+
 @st.cache_resource
-def cargar_modelo():
-    # joblib usa pickle: solo se carga el artefacto propio de este repositorio (fuente confiable), nunca archivos del usuario
-    return joblib.load(RUTA_MODELO)
+def cargar_modelo(_meta):
+    """Carga el pipeline serializado; si las librerías instaladas no pueden leerlo, lo reconstruye (tarda unos segundos)."""
+    try:
+        # joblib usa pickle: solo se carga el artefacto propio de este repositorio (fuente confiable), nunca archivos del usuario
+        return joblib.load(RUTA_MODELO), None
+    except Exception as error:   # Un pickle falla con distintos errores según la versión de las librerías
+        return reconstruir_modelo(_meta), f"{type(error).__name__}: {str(error)[:200]}"
 
 
 @st.cache_data
@@ -60,7 +104,8 @@ def interpretar(s, umbral):
     return "Baja probabilidad de alto desempeño: perfil prioritario para programas de nivelación y acompañamiento."
 
 
-modelo, meta = cargar_modelo(), cargar_metadata()
+meta = cargar_metadata()
+modelo, error_carga = cargar_modelo(meta)
 etiquetas, categorias = meta["etiquetas"], meta["categorias"]
 es_probabilidad = meta["tipo_puntaje"] == "probabilidad"
 
@@ -68,6 +113,11 @@ st.title("🎓 Predicción de alto desempeño en Saber 11")
 st.caption(f"Antioquia · periodo 2022-2 · Modelo: {meta['modelo_final']} · Fuente: ICFES — Datos Abiertos Colombia")
 st.info("📚 Proyecto académico de maestría con fines exclusivamente educativos (metodología CRISP-DM). "
         "No es una herramienta oficial del ICFES ni debe usarse para tomar decisiones sobre estudiantes reales.")
+if error_carga:
+    # Transparencia: el modelo en uso se reentrenó en este servidor con la configuración del notebook
+    st.warning("El archivo del modelo no es compatible con las versiones de librerías de este servidor, así que se "
+               "reconstruyó con los mismos datos, partición, preprocesamiento e hiperparámetros del notebook. "
+               f"Motivo técnico: {error_carga}")
 
 tab_individual, tab_lote, tab_modelo = st.tabs(["Predicción individual", "Predicción por lotes", "Sobre el modelo"])
 
