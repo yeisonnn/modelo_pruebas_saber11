@@ -4,7 +4,7 @@
   "fuente": "https://www.datos.gov.co/Educaci-n/Resultados-nicos-Saber-11/kgxf-xxbe",
   "objetivo": "alto_desempeno = 1 si punt_global >= 300",
   "modelo_final": "Regresión Logística (ajustado + umbral)",
-  "umbral_decision": 0.6152265930418449,
+  "umbral_decision": 0.6152265930370098,
   "tipo_puntaje": "probabilidad",
   "requiere_xgboost": false,
   "features": [
@@ -221,12 +221,12 @@
   "n_entrenamiento": 21000,
   "n_prueba": 9000,
   "versiones": {
-    "python": "3.9.7",
-    "scikit-learn": "1.6.1",
-    "imbalanced-learn": "0.12.4",
-    "xgboost": "2.1.4",
+    "python": "3.12.10",
+    "scikit-learn": "1.9.1",
+    "imbalanced-learn": "0.14.2",
+    "xgboost": "3.4.1",
     "pandas": "2.3.3",
-    "numpy": "2.0.2"
+    "numpy": "2.3.5"
   },
-  "fecha_entrenamiento": "2026-09-27"
+  "fecha_entrenamiento": "2026-09-26"
 }
