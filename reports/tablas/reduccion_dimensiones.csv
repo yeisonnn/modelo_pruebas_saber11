@@ -1,0 +1,2 @@
+tecnica,justificacion
+Análisis de Componentes Principales (PCA),"PCA: 17 de 50 componentes explican el 90 % de la varianza. F1 CV sin PCA = 0.4685; con PCA = 0.4592. No se aplica: no mejora el desempeño, la dimensión ya es baja y se perdería la interpretabilidad de las variables."

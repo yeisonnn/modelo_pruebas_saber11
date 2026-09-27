@@ -1,0 +1,55 @@
+variable,descripcion,tipo,rol,observacion
+periodo,Periodo de aplicación (año + semestre; 20224 = 2022-2),Cat,Excluida,Constante (filtro 2022-2)
+estu_tipodocumento,Tipo de documento de identidad del evaluado,Cat,Excluida,"Administrativa, sin relación causal plausible con el desempeño"
+estu_consecutivo,Identificador anonimizado del evaluado,Cat,Excluida,Identificador
+cole_area_ubicacion,Área de ubicación de la sede (URBANO/RURAL),Cat,Entrada,
+cole_bilingue,Colegio bilingüe (S/N),Cat,Entrada,
+cole_calendario,Calendario académico del colegio (A/B/OTRO),Cat,Excluida,Casi constante (calendario A)
+cole_caracter,"Carácter del colegio (académico, técnico, técnico/académico)",Cat,Entrada,
+cole_cod_dane_establecimiento,Código DANE del establecimiento,Cat,Excluida,Identificador de alta cardinalidad
+cole_cod_dane_sede,Código DANE de la sede,Cat,Excluida,Identificador de alta cardinalidad
+cole_cod_depto_ubicacion,Código DANE del departamento del colegio,Cat,Excluida,Constante (filtro Antioquia)
+cole_cod_mcpio_ubicacion,Código DANE del municipio del colegio,Cat,Insumo para derivar cole_valle_aburra,
+cole_codigo_icfes,Código ICFES del colegio,Cat,Excluida,Identificador de alta cardinalidad
+cole_depto_ubicacion,Departamento del colegio,Cat,Excluida,Constante (filtro Antioquia)
+cole_genero,Población del colegio por género (MIXTO/FEMENINO/MASCULINO),Cat,Entrada,
+cole_jornada,"Jornada (MAÑANA, TARDE, COMPLETA, UNICA, NOCHE, SABATINA)",Cat,Entrada,
+cole_mcpio_ubicacion,Municipio del colegio,Cat,Excluida,Redundante con el código de municipio
+cole_naturaleza,Naturaleza del colegio (OFICIAL/NO OFICIAL),Cat,Entrada,
+cole_nombre_establecimiento,Nombre del establecimiento,Cat,Excluida,Identificador de alta cardinalidad
+cole_nombre_sede,Nombre de la sede,Cat,Excluida,Identificador de alta cardinalidad
+cole_sede_principal,Sede principal (S/N),Cat,Entrada,
+estu_cod_depto_presentacion,Código del departamento donde presentó la prueba,Cat,Excluida,Redundante con la ubicación del colegio
+estu_cod_mcpio_presentacion,Código del municipio donde presentó la prueba,Cat,Excluida,Redundante con la ubicación del colegio
+estu_cod_reside_depto,Código del departamento de residencia,Cat,Excluida,Redundante con la ubicación del colegio
+estu_cod_reside_mcpio,Código del municipio de residencia,Cat,Excluida,Redundante con la ubicación del colegio
+estu_depto_presentacion,Departamento donde presentó la prueba,Cat,Excluida,Redundante con la ubicación del colegio
+estu_depto_reside,Departamento de residencia,Cat,Excluida,Redundante con la ubicación del colegio
+estu_estadoinvestigacion,Estado del resultado (PUBLICAR o en investigación),Cat,Excluida,Control de calidad: se usa para filtrar resultados no oficiales
+estu_estudiante,Tipo de evaluado,Cat,Excluida,Constante
+estu_fechanacimiento,Fecha de nacimiento (dd/mm/aaaa),Cat,Insumo para derivar edad,
+estu_genero,Género del estudiante (F/M),Cat,Entrada,
+estu_mcpio_presentacion,Municipio donde presentó la prueba,Cat,Excluida,Redundante con la ubicación del colegio
+estu_mcpio_reside,Municipio de residencia,Cat,Excluida,Redundante con la ubicación del colegio
+estu_nacionalidad,Nacionalidad del estudiante,Cat,Excluida,Casi constante (Colombia)
+estu_pais_reside,País de residencia,Cat,Excluida,Casi constante (Colombia)
+estu_privado_libertad,Evaluado privado de la libertad (S/N),Cat,Excluida,Casi constante (N)
+fami_cuartoshogar,Número de cuartos del hogar,Cat,Entrada,
+fami_educacionmadre,Máximo nivel educativo de la madre,Cat,Entrada,
+fami_educacionpadre,Máximo nivel educativo del padre,Cat,Entrada,
+fami_estratovivienda,Estrato socioeconómico de la vivienda,Cat,Entrada,
+fami_personashogar,Número de personas en el hogar,Cat,Entrada,
+fami_tieneautomovil,El hogar tiene automóvil (Si/No),Cat,Entrada,
+fami_tienecomputador,El hogar tiene computador (Si/No),Cat,Entrada,
+fami_tieneinternet,El hogar tiene internet (Si/No),Cat,Entrada,
+fami_tienelavadora,El hogar tiene lavadora (Si/No),Cat,Entrada,
+desemp_ingles,"Nivel de desempeño en inglés (A-, A1, A2, B1, B+)",Cat,Excluida,Fuga de información: derivada del puntaje de inglés
+punt_ingles,Puntaje en inglés (0–100),Num,Excluida,Fuga de información: componente del puntaje global
+punt_matematicas,Puntaje en matemáticas (0–100),Num,Excluida,Fuga de información: componente del puntaje global
+punt_sociales_ciudadanas,Puntaje en sociales y ciudadanas (0–100),Num,Excluida,Fuga de información: componente del puntaje global
+punt_c_naturales,Puntaje en ciencias naturales (0–100),Num,Excluida,Fuga de información: componente del puntaje global
+punt_lectura_critica,Puntaje en lectura crítica (0–100),Num,Excluida,Fuga de información: componente del puntaje global
+punt_global,Puntaje global (0–500),Num,Insumo para construir el objetivo,
+edad,DERIVADA: edad en años al 1-ago-2022 a partir de estu_fechanacimiento,Num,Entrada,
+cole_valle_aburra,DERIVADA: colegio en el Valle de Aburrá (Sí/No) según el código DANE del municipio,Cat,Entrada,
+alto_desempeno,OBJETIVO: 1 si punt_global ≥ 300; 0 en otro caso,Cat,Salida (objetivo),

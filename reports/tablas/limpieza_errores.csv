@@ -1,0 +1,6 @@
+tipo_error,accion,registros_afectados
+Filas duplicadas exactas (51 columnas),Eliminadas; se conserva la primera ocurrencia,72383
+Resultado en investigación,Eliminados: el puntaje no es oficial,26
+"Puntaje global nulo o fuera de [0, 500]",Eliminados: no se puede construir el objetivo,0
+"Edad fuera de [13, 30]",Convertida a NaN (imputación por mediana en el pipeline),1126
+Categorías fuera del dominio válido,"Homologadas si son variantes; si no, NaN",0

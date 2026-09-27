@@ -1,0 +1,6 @@
+modelo,hiperparametros_iniciales,metrica,cv_mean,cv_std
+Regresión Logística,"C=1.0, penalización L2, max_iter=2000",F1 (clase positiva),0.4696,0.0121
+Random Forest,"n_estimators=200, min_samples_leaf=5, max_features='sqrt'",F1 (clase positiva),0.469,0.0099
+SVM (RBF),"kernel='rbf', C=1.0, gamma='scale'",F1 (clase positiva),0.4659,0.0131
+Árbol de Decisión,"max_depth=8, criterion='gini', min_samples_leaf=1",F1 (clase positiva),0.4298,0.013
+KNN,"n_neighbors=15, weights='uniform', p=2 (euclidiana)",F1 (clase positiva),0.4289,0.0093

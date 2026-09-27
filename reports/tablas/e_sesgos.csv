@@ -1,0 +1,23 @@
+variable,grupo,estudiantes,pct_estudiantes,tasa_alto_desempeno_pct
+Género del estudiante,F,40011,55.28,14.47
+Género del estudiante,M,32372,44.72,20.41
+Zona del colegio,RURAL,12539,17.32,9.63
+Zona del colegio,URBANO,59844,82.68,18.7
+Naturaleza del colegio,NO OFICIAL,14753,20.38,31.45
+Naturaleza del colegio,OFICIAL,57630,79.62,13.46
+Subregión,Resto de Antioquia,29736,41.08,11.34
+Subregión,Valle de Aburrá,42647,58.92,21.16
+Estrato,Estrato 1,14173,19.58,7.91
+Estrato,Estrato 2,26652,36.82,14.51
+Estrato,Estrato 3,18596,25.69,23.46
+Estrato,Estrato 4,4317,5.96,32.59
+Estrato,Estrato 5,1694,2.34,46.87
+Estrato,Estrato 6,668,0.92,43.26
+Estrato,Sin Estrato,1561,2.16,4.55
+Estrato,Sin dato,4722,6.52,10.29
+Jornada,COMPLETA,15580,21.52,26.51
+Jornada,MAÑANA,24302,33.57,16.48
+Jornada,NOCHE,3580,4.95,2.15
+Jornada,SABATINA,7041,9.73,2.1
+Jornada,TARDE,5629,7.78,13.87
+Jornada,UNICA,16251,22.45,20.02

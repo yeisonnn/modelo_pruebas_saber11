@@ -1,0 +1,11 @@
+registro,edad,fami_estratovivienda,fami_educacionmadre,fami_educacionpadre,fami_personashogar,fami_cuartoshogar,estu_genero,fami_tieneinternet,fami_tienecomputador,fami_tieneautomovil,fami_tienelavadora,cole_naturaleza,cole_jornada,cole_area_ubicacion,cole_bilingue,cole_caracter,cole_genero,cole_sede_principal,cole_valle_aburra
+"A1 · Rural oficial, estrato 1, sin internet ni computador",18,Estrato 1,Primaria incompleta,Primaria incompleta,5 a 6,Dos,M,No,No,No,No,OFICIAL,UNICA,RURAL,N,TÉCNICO/ACADÉMICO,MIXTO,N,No
+"A2 · Urbano oficial del Valle de Aburrá, estrato 2, madre bachiller",17,Estrato 2,Secundaria (Bachillerato) completa,Secundaria (Bachillerato) completa,3 a 4,Tres,F,Si,Si,No,Si,OFICIAL,MAÑANA,URBANO,N,ACADÉMICO,MIXTO,S,Sí
+"A3 · Urbano no oficial, estrato 4, padres profesionales",17,Estrato 4,Educación profesional completa,Educación profesional completa,3 a 4,Tres,M,Si,Si,Si,Si,NO OFICIAL,COMPLETA,URBANO,N,ACADÉMICO,MIXTO,S,Sí
+"A4 · Colegio bilingüe no oficial, estrato 6, padres con posgrado",16,Estrato 6,Postgrado,Postgrado,3 a 4,Cuatro,F,Si,Si,Si,Si,NO OFICIAL,COMPLETA,URBANO,S,ACADÉMICO,MIXTO,S,Sí
+"A5 · Adulto en jornada sabatina, estrato 2, padre desconocido",26,Estrato 2,Primaria completa,No sabe,3 a 4,Dos,F,Si,No,No,Si,NO OFICIAL,SABATINA,URBANO,N,ACADÉMICO,MIXTO,S,Sí
+R1 · Perfil aleatorio,19,Estrato 3,Primaria incompleta,Secundaria (Bachillerato) incompleta,3 a 4,Tres,F,Si,Si,Si,Si,OFICIAL,COMPLETA,URBANO,N,TÉCNICO/ACADÉMICO,MIXTO,S,Sí
+R2 · Perfil aleatorio,19,Estrato 3,Secundaria (Bachillerato) completa,Técnica o tecnológica completa,3 a 4,Seis o mas,F,Si,Si,Si,Si,OFICIAL,SABATINA,RURAL,N,ACADÉMICO,MIXTO,S,No
+R3 · Perfil aleatorio,17,Estrato 3,Primaria completa,Primaria incompleta,3 a 4,Dos,M,Si,Si,No,No,OFICIAL,COMPLETA,URBANO,N,TÉCNICO,MIXTO,S,No
+R4 · Perfil aleatorio,17,Estrato 2,Educación profesional completa,Primaria incompleta,7 a 8,Tres,F,Si,No,No,Si,OFICIAL,SABATINA,URBANO,N,TÉCNICO/ACADÉMICO,MIXTO,N,Sí
+R5 · Perfil aleatorio,19,Estrato 1,Secundaria (Bachillerato) completa,Primaria completa,3 a 4,Cinco,F,Si,Si,No,Si,NO OFICIAL,COMPLETA,RURAL,N,TÉCNICO/ACADÉMICO,MIXTO,N,Sí

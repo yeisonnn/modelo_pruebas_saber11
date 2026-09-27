@@ -1,0 +1,8 @@
+variable,rango_esperado,nulos,fuera_de_rango,pct_incumplimiento
+punt_global,"[0, 500]",0,0,0.0
+punt_matematicas,"[0, 100]",0,0,0.0
+punt_lectura_critica,"[0, 100]",0,0,0.0
+punt_sociales_ciudadanas,"[0, 100]",0,0,0.0
+punt_c_naturales,"[0, 100]",0,0,0.0
+punt_ingles,"[0, 100]",102,0,0.0
+edad,"[13, 30]",0,2252,1.556

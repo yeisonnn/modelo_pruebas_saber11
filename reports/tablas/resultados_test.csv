@@ -1,0 +1,15 @@
+modelo,accuracy,precision,recall,f1,roc_auc,pr_auc
+Regresión Logística (ajustado + umbral),0.7789,0.3996,0.5795,0.473,0.7975,0.4613
+Random Forest (ajustado + umbral),0.7723,0.3916,0.5957,0.4726,0.7967,0.48
+SVM (RBF) (ajustado + umbral),0.7663,0.3845,0.6067,0.4707,0.7799,0.3952
+Random Forest (ajustado),0.7097,0.3386,0.7294,0.4625,0.7967,0.48
+Regresión Logística (ajustado),0.7041,0.3345,0.7359,0.4599,0.7975,0.4613
+Random Forest (base),0.7079,0.3362,0.7249,0.4594,0.7967,0.4803
+Regresión Logística (base),0.7026,0.3334,0.7378,0.4593,0.7975,0.4606
+XGBoost (base),0.7003,0.3316,0.7385,0.4577,0.7997,0.4842
+SVM (RBF) (base),0.6961,0.3292,0.7469,0.457,0.7904,0.404
+SVM (RBF) (ajustado),0.6988,0.3298,0.7359,0.4555,0.7799,0.3952
+Votación (soft) (base),0.699,0.3288,0.7281,0.4531,0.7931,0.4714
+Bagging (árboles) (base),0.6962,0.317,0.6703,0.4304,0.7616,0.4155
+Árbol de Decisión (base),0.6931,0.314,0.669,0.4274,0.748,0.3604
+KNN (base),0.6472,0.2914,0.7404,0.4182,0.7604,0.3968

@@ -1,0 +1,20 @@
+variable,justificacion
+edad,Derivada de la fecha de nacimiento; la extraedad se asocia con rezago escolar
+fami_estratovivienda,Nivel socioeconómico del hogar
+fami_educacionmadre,Capital cultural del hogar; predictor clásico del logro académico
+fami_educacionpadre,Capital cultural del hogar
+fami_personashogar,Tamaño del hogar (recursos per cápita)
+fami_cuartoshogar,Condiciones de la vivienda (hacinamiento)
+estu_genero,Brechas de género documentadas en pruebas estandarizadas; permite auditar sesgo
+fami_tieneinternet,Acceso a recursos digitales de estudio
+fami_tienecomputador,Acceso a recursos digitales de estudio
+fami_tieneautomovil,Ingreso del hogar
+fami_tienelavadora,Condiciones materiales del hogar
+cole_naturaleza,Oficial vs. privado: diferencias de recursos y de selección de estudiantes
+cole_jornada,Intensidad horaria y tipo de población (sabatina/noche = jóvenes y adultos)
+cole_area_ubicacion,Brecha urbano-rural
+cole_bilingue,Intensidad en inglés y recursos del colegio
+cole_caracter,Orientación académica vs. técnica
+cole_genero,"Composición del colegio (mixto, femenino, masculino)"
+cole_sede_principal,Las sedes principales suelen concentrar más recursos
+cole_valle_aburra,Resume 125 municipios en un indicador área metropolitana vs. resto de Antioquia

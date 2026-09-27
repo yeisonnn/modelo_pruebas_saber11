@@ -1,0 +1,232 @@
+{
+  "proyecto": "Predicción de alto desempeño en Saber 11 — Antioquia 2022-2",
+  "proposito": "Proyecto académico de maestría con fines exclusivamente educativos; no es una herramienta oficial",
+  "fuente": "https://www.datos.gov.co/Educaci-n/Resultados-nicos-Saber-11/kgxf-xxbe",
+  "objetivo": "alto_desempeno = 1 si punt_global >= 300",
+  "modelo_final": "Regresión Logística (ajustado + umbral)",
+  "umbral_decision": 0.6152265930418449,
+  "tipo_puntaje": "probabilidad",
+  "requiere_xgboost": false,
+  "features": [
+    "edad",
+    "fami_estratovivienda",
+    "fami_educacionmadre",
+    "fami_educacionpadre",
+    "fami_personashogar",
+    "fami_cuartoshogar",
+    "estu_genero",
+    "fami_tieneinternet",
+    "fami_tienecomputador",
+    "fami_tieneautomovil",
+    "fami_tienelavadora",
+    "cole_naturaleza",
+    "cole_jornada",
+    "cole_area_ubicacion",
+    "cole_bilingue",
+    "cole_caracter",
+    "cole_genero",
+    "cole_sede_principal",
+    "cole_valle_aburra"
+  ],
+  "variables_numericas": [
+    "edad"
+  ],
+  "variables_ordinales": [
+    "fami_estratovivienda",
+    "fami_educacionmadre",
+    "fami_educacionpadre",
+    "fami_personashogar",
+    "fami_cuartoshogar"
+  ],
+  "variables_nominales": [
+    "estu_genero",
+    "fami_tieneinternet",
+    "fami_tienecomputador",
+    "fami_tieneautomovil",
+    "fami_tienelavadora",
+    "cole_naturaleza",
+    "cole_jornada",
+    "cole_area_ubicacion",
+    "cole_bilingue",
+    "cole_caracter",
+    "cole_genero",
+    "cole_sede_principal",
+    "cole_valle_aburra"
+  ],
+  "categorias": {
+    "estu_genero": [
+      "F",
+      "M"
+    ],
+    "fami_tieneinternet": [
+      "No",
+      "Si"
+    ],
+    "fami_tienecomputador": [
+      "No",
+      "Si"
+    ],
+    "fami_tieneautomovil": [
+      "No",
+      "Si"
+    ],
+    "fami_tienelavadora": [
+      "No",
+      "Si"
+    ],
+    "cole_naturaleza": [
+      "NO OFICIAL",
+      "OFICIAL"
+    ],
+    "cole_jornada": [
+      "COMPLETA",
+      "MAÑANA",
+      "NOCHE",
+      "SABATINA",
+      "TARDE",
+      "UNICA"
+    ],
+    "cole_area_ubicacion": [
+      "RURAL",
+      "URBANO"
+    ],
+    "cole_bilingue": [
+      "N",
+      "S"
+    ],
+    "cole_caracter": [
+      "ACADÉMICO",
+      "NO APLICA",
+      "TÉCNICO",
+      "TÉCNICO/ACADÉMICO"
+    ],
+    "cole_genero": [
+      "FEMENINO",
+      "MASCULINO",
+      "MIXTO"
+    ],
+    "cole_sede_principal": [
+      "N",
+      "S"
+    ],
+    "cole_valle_aburra": [
+      "No",
+      "Sí"
+    ],
+    "fami_estratovivienda": [
+      "Sin Estrato",
+      "Estrato 1",
+      "Estrato 2",
+      "Estrato 3",
+      "Estrato 4",
+      "Estrato 5",
+      "Estrato 6"
+    ],
+    "fami_educacionmadre": [
+      "Ninguno",
+      "Primaria incompleta",
+      "Primaria completa",
+      "Secundaria (Bachillerato) incompleta",
+      "Secundaria (Bachillerato) completa",
+      "Técnica o tecnológica incompleta",
+      "Técnica o tecnológica completa",
+      "Educación profesional incompleta",
+      "Educación profesional completa",
+      "Postgrado",
+      "No sabe"
+    ],
+    "fami_educacionpadre": [
+      "Ninguno",
+      "Primaria incompleta",
+      "Primaria completa",
+      "Secundaria (Bachillerato) incompleta",
+      "Secundaria (Bachillerato) completa",
+      "Técnica o tecnológica incompleta",
+      "Técnica o tecnológica completa",
+      "Educación profesional incompleta",
+      "Educación profesional completa",
+      "Postgrado",
+      "No sabe"
+    ],
+    "fami_personashogar": [
+      "1 a 2",
+      "3 a 4",
+      "5 a 6",
+      "7 a 8",
+      "9 o más"
+    ],
+    "fami_cuartoshogar": [
+      "Uno",
+      "Dos",
+      "Tres",
+      "Cuatro",
+      "Cinco",
+      "Seis o mas"
+    ]
+  },
+  "etiquetas": {
+    "edad": "Edad (años)",
+    "estu_genero": "Género del estudiante",
+    "fami_estratovivienda": "Estrato de la vivienda",
+    "fami_educacionmadre": "Educación de la madre",
+    "fami_educacionpadre": "Educación del padre",
+    "fami_personashogar": "Personas en el hogar",
+    "fami_cuartoshogar": "Cuartos en el hogar",
+    "fami_tieneinternet": "¿Internet en el hogar?",
+    "fami_tienecomputador": "¿Computador en el hogar?",
+    "fami_tieneautomovil": "¿Automóvil en el hogar?",
+    "fami_tienelavadora": "¿Lavadora en el hogar?",
+    "cole_naturaleza": "Naturaleza del colegio",
+    "cole_jornada": "Jornada",
+    "cole_area_ubicacion": "Zona del colegio",
+    "cole_bilingue": "¿Colegio bilingüe? (S/N)",
+    "cole_caracter": "Carácter del colegio",
+    "cole_genero": "Género del colegio",
+    "cole_sede_principal": "¿Sede principal? (S/N)",
+    "cole_valle_aburra": "¿Colegio en el Valle de Aburrá?"
+  },
+  "rango_edad": [
+    13,
+    30
+  ],
+  "edad_mediana": 17.0,
+  "valores_por_defecto": {
+    "fami_estratovivienda": "Estrato 2",
+    "fami_educacionmadre": "Secundaria (Bachillerato) completa",
+    "fami_educacionpadre": "Secundaria (Bachillerato) completa",
+    "fami_personashogar": "3 a 4",
+    "fami_cuartoshogar": "Tres",
+    "estu_genero": "F",
+    "fami_tieneinternet": "Si",
+    "fami_tienecomputador": "Si",
+    "fami_tieneautomovil": "No",
+    "fami_tienelavadora": "Si",
+    "cole_naturaleza": "OFICIAL",
+    "cole_jornada": "MAÑANA",
+    "cole_area_ubicacion": "URBANO",
+    "cole_bilingue": "N",
+    "cole_caracter": "ACADÉMICO",
+    "cole_genero": "MIXTO",
+    "cole_sede_principal": "S",
+    "cole_valle_aburra": "Sí"
+  },
+  "metricas_test": {
+    "accuracy": 0.7788888888888889,
+    "precision": 0.3995525727069351,
+    "recall": 0.5794938351719663,
+    "f1": 0.4729872881355932,
+    "roc_auc": 0.7975366352717372,
+    "pr_auc": 0.46134249032583907
+  },
+  "n_entrenamiento": 21000,
+  "n_prueba": 9000,
+  "versiones": {
+    "python": "3.9.7",
+    "scikit-learn": "1.6.1",
+    "imbalanced-learn": "0.12.4",
+    "xgboost": "2.1.4",
+    "pandas": "2.3.3",
+    "numpy": "2.0.2"
+  },
+  "fecha_entrenamiento": "2026-09-27"
+}

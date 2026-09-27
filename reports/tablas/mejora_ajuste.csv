@@ -1,0 +1,4 @@
+modelo,f1_cv_base,f1_cv_ajustado,f1_cv_ajustado_umbral,umbral_optimo,mejora_total
+Regresión Logística,0.4696,0.4701,0.4856,0.6152,0.016
+Random Forest,0.469,0.4696,0.4815,0.5804,0.0125
+SVM (RBF),0.4659,0.4655,0.4748,0.4316,0.0089

@@ -1,0 +1,20 @@
+variable,metodo
+edad,Numérica: imputación por mediana + estandarización (z-score)
+fami_estratovivienda,Ordinal con orden explícito (Sin Estrato < … < Estrato 6) + indicador de faltante + estandarización
+fami_educacionmadre,Ordinal con orden explícito (Ninguno < … < Postgrado) + indicador de faltante + estandarización
+fami_educacionpadre,Ordinal con orden explícito (Ninguno < … < Postgrado) + indicador de faltante + estandarización
+fami_personashogar,Ordinal con orden explícito (1 a 2 < … < 9 o más) + indicador de faltante + estandarización
+fami_cuartoshogar,Ordinal con orden explícito (Uno < … < Seis o mas) + indicador de faltante + estandarización
+estu_genero,"One-Hot Encoding (una columna por categoría, incluida DESCONOCIDO)"
+fami_tieneinternet,"One-Hot Encoding (una columna por categoría, incluida DESCONOCIDO)"
+fami_tienecomputador,"One-Hot Encoding (una columna por categoría, incluida DESCONOCIDO)"
+fami_tieneautomovil,"One-Hot Encoding (una columna por categoría, incluida DESCONOCIDO)"
+fami_tienelavadora,"One-Hot Encoding (una columna por categoría, incluida DESCONOCIDO)"
+cole_naturaleza,"One-Hot Encoding (una columna por categoría, incluida DESCONOCIDO)"
+cole_jornada,"One-Hot Encoding (una columna por categoría, incluida DESCONOCIDO)"
+cole_area_ubicacion,"One-Hot Encoding (una columna por categoría, incluida DESCONOCIDO)"
+cole_bilingue,"One-Hot Encoding (una columna por categoría, incluida DESCONOCIDO)"
+cole_caracter,"One-Hot Encoding (una columna por categoría, incluida DESCONOCIDO)"
+cole_genero,"One-Hot Encoding (una columna por categoría, incluida DESCONOCIDO)"
+cole_sede_principal,"One-Hot Encoding (una columna por categoría, incluida DESCONOCIDO)"
+cole_valle_aburra,"One-Hot Encoding (una columna por categoría, incluida DESCONOCIDO)"

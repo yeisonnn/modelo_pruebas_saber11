@@ -1,0 +1,4 @@
+criterio,meta,resultado,cumple
+Detectar al menos la mitad de los estudiantes de alto desempeño,"Recall ≥ 0,55",0.5795,✅ Sí
+Focalizar mejor que el azar,Lift ≥ 2 (tasa base = 0.171),2.33,✅ Sí
+Superar la línea base,F1 > 0.4593 (regresión logística base),0.473,✅ Sí

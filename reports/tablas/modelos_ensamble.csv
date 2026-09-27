@@ -1,0 +1,4 @@
+modelo,tipo,desempeno,mejora_vs_clasico
+Votación (soft),"Votación suave (heterogéneo): Regresión Logística, Random Forest, Árbol de Decisión",F1 CV = 0.4643 ± 0.0138,-0.0054 vs Regresión Logística
+XGBoost,"Boosting (secuencial, por gradiente)",F1 CV = 0.4602 ± 0.0084,-0.0094 vs Regresión Logística
+Bagging (árboles),"Bagging (homogéneo, paralelo, bootstrap)",F1 CV = 0.4363 ± 0.0090,-0.0333 vs Regresión Logística

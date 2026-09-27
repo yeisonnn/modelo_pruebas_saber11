@@ -1,0 +1,18 @@
+variable,categorias_validas,nulos,valores_invalidos,ejemplos_invalidos,pct_incumplimiento
+estu_genero,"F, M",0,0,,0.0
+fami_estratovivienda,"Sin Estrato, Estrato 1, Estrato 2, Estrato 3, Estrato 4, Estrato 5, Estrato 6",9444,0,,0.0
+fami_educacionmadre,"Ninguno, Primaria incompleta, Primaria completa, Secundaria (Bachillerato) incompleta, Secundaria (Bachillerato) completa, Técnica o tecnológica incompleta, Técnica o tecnológica completa, Educación profesional incompleta, Educación profesional completa, Postgrado, No sabe, No Aplica",8392,0,,0.0
+fami_educacionpadre,"Ninguno, Primaria incompleta, Primaria completa, Secundaria (Bachillerato) incompleta, Secundaria (Bachillerato) completa, Técnica o tecnológica incompleta, Técnica o tecnológica completa, Educación profesional incompleta, Educación profesional completa, Postgrado, No sabe, No Aplica",8534,0,,0.0
+fami_personashogar,"1 a 2, 3 a 4, 5 a 6, 7 a 8, 9 o más",6608,0,,0.0
+fami_cuartoshogar,"Uno, Dos, Tres, Cuatro, Cinco, Seis o mas",6822,0,,0.0
+fami_tieneinternet,"Si, No",8514,0,,0.0
+fami_tienecomputador,"Si, No",6826,0,,0.0
+fami_tieneautomovil,"Si, No",7212,0,,0.0
+fami_tienelavadora,"Si, No",6848,0,,0.0
+cole_naturaleza,"OFICIAL, NO OFICIAL",0,0,,0.0
+cole_jornada,"COMPLETA, MAÑANA, TARDE, NOCHE, SABATINA, UNICA",0,0,,0.0
+cole_area_ubicacion,"URBANO, RURAL",0,0,,0.0
+cole_bilingue,"S, N",23722,0,,0.0
+cole_caracter,"ACADÉMICO, TÉCNICO, TÉCNICO/ACADÉMICO, NO APLICA",4744,0,,0.0
+cole_genero,"MIXTO, FEMENINO, MASCULINO",0,0,,0.0
+cole_sede_principal,"S, N",0,0,,0.0

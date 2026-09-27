@@ -1,0 +1,5 @@
+metrica,resultado
+Número de registros,"144,766"
+Número de variables,20 (19 de entrada + punt_global)
+Variables numéricas,"2 (edad, punt_global)"
+Variables categóricas,18 (5 ordinales + 13 nominales)

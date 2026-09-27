@@ -1,0 +1,2 @@
+modelo_final,justificacion
+Regresión Logística (ajustado + umbral),"Mayor F1 en validación cruzada (0.4856). En test: F1 = 0.4730 (IC95 % bootstrap 0.453–0.494), Recall = 0.5795, Precision = 0.3996, ROC-AUC = 0.7975. McNemar frente a Random Forest (ajustado + umbral): p = 0.0249. t-test corregido (Nadeau–Bengio) en CV frente a Random Forest: p = 0.895; frente a la regresión logística base: p = 0.67."

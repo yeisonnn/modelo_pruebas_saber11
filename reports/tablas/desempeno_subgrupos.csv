@@ -1,0 +1,9 @@
+variable,grupo,registros,tasa_real,tasa_predicha,precision,recall,f1
+estu_genero,F,4974,0.1456,0.1673,0.4411,0.5069,0.4717
+estu_genero,M,4026,0.2029,0.3485,0.3749,0.6438,0.4739
+cole_area_ubicacion,RURAL,1485,0.1064,0.1057,0.4841,0.481,0.4825
+cole_area_ubicacion,URBANO,7515,0.184,0.2765,0.3932,0.5907,0.4721
+cole_naturaleza,NO OFICIAL,1843,0.3201,0.5334,0.5239,0.8729,0.6548
+cole_naturaleza,OFICIAL,7157,0.1329,0.1749,0.3019,0.3975,0.3432
+cole_valle_aburra,No,3743,0.1122,0.1341,0.3486,0.4167,0.3796
+cole_valle_aburra,Sí,5257,0.2132,0.3297,0.4143,0.6405,0.5032

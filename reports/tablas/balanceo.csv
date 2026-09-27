@@ -1,0 +1,2 @@
+tecnica,justificacion
+Submuestreo aleatorio (RandomUnderSampler),"Submuestreo aleatorio (RandomUnderSampler): mejor F1 en CV entre los muestreadores (0.4696 frente a 0.3157 sin balanceo). Se aplica dentro del pipeline (imblearn), solo en los folds de entrenamiento, para no contaminar la validación ni el test."

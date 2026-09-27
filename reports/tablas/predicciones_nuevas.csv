@@ -1,0 +1,11 @@
+registro,prediccion,interpretacion
+"A1 · Rural oficial, estrato 1, sin internet ni computador",No alto (puntaje = 0.072),Baja probabilidad de alto desempeño: perfil prioritario para nivelación y acompañamiento.
+"A2 · Urbano oficial del Valle de Aburrá, estrato 2, madre bachiller",No alto (puntaje = 0.416),Probabilidad intermedia: puede alcanzar el umbral con refuerzo focalizado.
+"A3 · Urbano no oficial, estrato 4, padres profesionales",Alto desempeño (puntaje = 0.913),Perfil similar a estudiantes con alto desempeño: priorizar oferta de becas y estímulos.
+"A4 · Colegio bilingüe no oficial, estrato 6, padres con posgrado",Alto desempeño (puntaje = 0.865),Perfil similar a estudiantes con alto desempeño: priorizar oferta de becas y estímulos.
+"A5 · Adulto en jornada sabatina, estrato 2, padre desconocido",No alto (puntaje = 0.008),Baja probabilidad de alto desempeño: perfil prioritario para nivelación y acompañamiento.
+R1 · Perfil aleatorio,No alto (puntaje = 0.279),Baja probabilidad de alto desempeño: perfil prioritario para nivelación y acompañamiento.
+R2 · Perfil aleatorio,No alto (puntaje = 0.083),Baja probabilidad de alto desempeño: perfil prioritario para nivelación y acompañamiento.
+R3 · Perfil aleatorio,No alto (puntaje = 0.578),Probabilidad intermedia: puede alcanzar el umbral con refuerzo focalizado.
+R4 · Perfil aleatorio,No alto (puntaje = 0.129),Baja probabilidad de alto desempeño: perfil prioritario para nivelación y acompañamiento.
+R5 · Perfil aleatorio,No alto (puntaje = 0.226),Baja probabilidad de alto desempeño: perfil prioritario para nivelación y acompañamiento.
